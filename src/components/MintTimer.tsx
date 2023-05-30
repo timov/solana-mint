@@ -201,7 +201,10 @@ export default function MintGroup({
                 />
                 </MintTimerWrap>
             ) : null}
-            
+
+            {guardStates.isStarted && !guards.endTime ? (
+                <MintTimerWrapEnded>Live</MintTimerWrapEnded>
+            ) : null}
 
             {guardStates.isStarted && guards.endTime && !guardStates.isEnded ? (
                 <MintTimerWrap> Ends in
