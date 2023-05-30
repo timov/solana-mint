@@ -647,7 +647,7 @@ const Home = (props: HomeProps) => {
           <Container>
             <Column>
               <Content>
-                <CollectionName>Collection Name</CollectionName>
+                <CollectionName>Synaptic Symphony</CollectionName>
                 <InfoRow>
                   {guardStates.isStarted && wallet.publicKey && (
                     <InfoBox>
@@ -660,7 +660,7 @@ const Home = (props: HomeProps) => {
                     <a href="#" target="_blank" rel="noopener noreferrer"><Discord></Discord></a>
                   </IconRow>
                 </InfoRow>
-                <CollectionDescription>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</CollectionDescription>
+                <CollectionDescription>Mesmerizing collection of digital artworks that transcends the boundaries of reality and explores the ethereal realm of dreams!</CollectionDescription>
               </Content>
               <Other>
 
