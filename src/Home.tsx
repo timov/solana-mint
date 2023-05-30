@@ -100,7 +100,7 @@ const Other = styled.div`
 const ImageWrap = styled.div`
   aspect-ratio: 1 / 1;
   width: 100%;
-  background-image: url(https://images.pexels.com/photos/2832432/pexels-photo-2832432.png);
+  background-image: url(https://bufna6qy25r7f7mbqxgfi3osd7iu2scge4tjmt2ne6nksui2p6vq.arweave.net/DQrQehjXY_L9gYXMVG3SH9FNSEYnJpZPTSeaqVEaf6s?ext=png);
   border-radius: 16px;
 `
 const Image = styled.div`
