@@ -13,7 +13,7 @@
     "description": "Only users who are whitelisted can mint.",
     "groups": [
       {
-        "label": "Wl"
+        "label": "WLs"
       }
     ]
   },
