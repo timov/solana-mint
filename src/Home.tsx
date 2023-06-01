@@ -645,6 +645,52 @@ const Home = (props: HomeProps) => {
         </Header>
         <Section>
           <Container>
+          <Column>
+              <ColumnInner>
+                <ImageWrap>
+                  <Image>
+
+                  </Image>
+                </ImageWrap>
+
+                {guardStates.isStarted && wallet.publicKey && (
+                <div>
+                  {mintGroups.map((x, key) => (
+                    <div key={key}>
+                      {x.groups.map((y, k) => (
+                        <MintGroup mintGroup={y} key={k} candyMachineV3={candyMachineV3} />
+                      ))}
+                    </div>
+                  ))}
+                </div> )}
+
+                <ProgressbarWrap>
+                  {guardStates.isStarted && wallet.publicKey && (
+                    <MintCount>
+                      Total minted {candyMachineV3.items.redeemed} /
+                      {candyMachineV3.items.available}{" "}
+                      {(guards?.mintLimit?.mintCounter?.count ||
+                        guards?.mintLimit?.settings?.limit) && (
+                          <MintedByYou>
+                            <>
+                              ({guards?.mintLimit?.mintCounter?.count || "0"}
+                              {guards?.mintLimit?.settings?.limit && (
+                                <>/{guards?.mintLimit?.settings?.limit} </>
+                              )}
+                              by you)
+                            </>
+                          </MintedByYou>
+                        )}
+                    </MintCount>
+                  )}
+                  {guardStates.isStarted && wallet.publicKey && (
+                    <div className="w-100">
+                      <BorderLinearProgress variant="determinate" value={(candyMachineV3.items.redeemed * 100 / candyMachineV3.items.available)}></BorderLinearProgress>
+                    </div>
+                  )}
+                </ProgressbarWrap>
+              </ColumnInner>
+            </Column>
             <Column>
               <Content>
                 <CollectionName>Collection Name</CollectionName>
@@ -700,52 +746,6 @@ const Home = (props: HomeProps) => {
                   setMintedItems={setMintedItems}
                 />
               </Other>
-            </Column>
-            <Column>
-              <ColumnInner>
-                <ImageWrap>
-                  <Image>
-
-                  </Image>
-                </ImageWrap>
-
-                {guardStates.isStarted && wallet.publicKey && (
-                <div>
-                  {mintGroups.map((x, key) => (
-                    <div key={key}>
-                      {x.groups.map((y, k) => (
-                        <MintGroup mintGroup={y} key={k} candyMachineV3={candyMachineV3} />
-                      ))}
-                    </div>
-                  ))}
-                </div> )}
-
-                <ProgressbarWrap>
-                  {guardStates.isStarted && wallet.publicKey && (
-                    <MintCount>
-                      Total minted {candyMachineV3.items.redeemed} /
-                      {candyMachineV3.items.available}{" "}
-                      {(guards?.mintLimit?.mintCounter?.count ||
-                        guards?.mintLimit?.settings?.limit) && (
-                          <MintedByYou>
-                            <>
-                              ({guards?.mintLimit?.mintCounter?.count || "0"}
-                              {guards?.mintLimit?.settings?.limit && (
-                                <>/{guards?.mintLimit?.settings?.limit} </>
-                              )}
-                              by you)
-                            </>
-                          </MintedByYou>
-                        )}
-                    </MintCount>
-                  )}
-                  {guardStates.isStarted && wallet.publicKey && (
-                    <div className="w-100">
-                      <BorderLinearProgress variant="determinate" value={(candyMachineV3.items.redeemed * 100 / candyMachineV3.items.available)}></BorderLinearProgress>
-                    </div>
-                  )}
-                </ProgressbarWrap>
-              </ColumnInner>
             </Column>
           </Container>
         </Section>
