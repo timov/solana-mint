@@ -339,14 +339,14 @@ export const MultiMintButton = ({
           {!candyMachine ? (
             "CONNECTING..."
           ) : isSoldOut ? (
-            "SOLD OUT"
+            "SOLD OUT!"
           ) : isActive ? guardStates.messages.length ? (guardStates.messages[0]) : (
             mintCount > limit ? (
-              "LIMIT REACHED"
+              "LIMIT REACHED!"
             ) : isMinting || loading ? (
-              "PLEASE WAIT, MINT IN PROGRESS"
+              "MINT IN PROGRESS..."
             ) : (
-              "MINT"
+              "MINT!"
             )
           ) : isEnded ? (
             "ENDED"
@@ -387,11 +387,7 @@ export const MultiMintButton = ({
           </NumbericIcon>
           </NumberInput>
           </ButtonWrap>
-        
       </div>
-      {guardStates.messages?.map((m, i) => (
-        <p key={i}>{m}</p>
-      ))}
     </div>
   );
 };
