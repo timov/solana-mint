@@ -55,7 +55,6 @@ export const CTAButton = styled.button`
   color: var(--white);
   cursor: pointer;
   border: none;
-  font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -73,7 +72,6 @@ export const ButtonWrap = styled.div`
   align-items: center;
   color: var(--white);
   border: none;
-  font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -118,7 +116,6 @@ export const NumericField = styled.input`
   background-color: none;
   box-sizing: border-box;
   background: none;
-  font-family: 'Plus Jakarta Sans';
   font-weight: 600;
   line-height: 100%;
   height: 20px;
@@ -143,7 +140,6 @@ export const NumericField = styled.input`
   }
 `;
 export const EstimatedCost = styled.p`
-  font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
