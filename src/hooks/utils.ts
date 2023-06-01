@@ -371,7 +371,7 @@ export const parseGuardStates = ({
         : 10;
     states.isLimitReached = !canPayFor;
     if (!canPayFor)
-      states.messages.push("Mint limit has been reached!");
+      states.messages.push("Mint limit is reached!");
     states.canPayFor = Math.min(states.canPayFor, canPayFor);
   }
 
@@ -382,7 +382,7 @@ export const parseGuardStates = ({
       0
     );
     states.isLimitReached = !canPayFor;
-    if (!canPayFor) states.messages.push("Readeem limit has been reached!");
+    if (!canPayFor) states.messages.push("Readeem limit is reached!");
     states.canPayFor = Math.min(states.canPayFor, canPayFor);
   }
 
