@@ -100,7 +100,7 @@ const Other = styled.div`
 const ImageWrap = styled.div`
   aspect-ratio: 1 / 1;
   width: 100%;
-  background-image: url(https://bufna6qy25r7f7mbqxgfi3osd7iu2scge4tjmt2ne6nksui2p6vq.arweave.net/DQrQehjXY_L9gYXMVG3SH9FNSEYnJpZPTSeaqVEaf6s?ext=png);
+  background-image: url(https://images.pexels.com/photos/2832432/pexels-photo-2832432.png);
   border-radius: 16px;
 `
 const Image = styled.div`
@@ -647,7 +647,7 @@ const Home = (props: HomeProps) => {
           <Container>
             <Column>
               <Content>
-                <CollectionName>Synaptic Symphony</CollectionName>
+                <CollectionName>Collection Name</CollectionName>
                 <InfoRow>
                   {guardStates.isStarted && wallet.publicKey && (
                     <InfoBox>
@@ -660,7 +660,7 @@ const Home = (props: HomeProps) => {
                     <a href="#" target="_blank" rel="noopener noreferrer"><Discord></Discord></a>
                   </IconRow>
                 </InfoRow>
-                <CollectionDescription>Mesmerizing collection of digital artworks that transcends the boundaries of reality and explores the ethereal realm of dreams!</CollectionDescription>
+                <CollectionDescription>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</CollectionDescription>
               </Content>
               <Other>
 
