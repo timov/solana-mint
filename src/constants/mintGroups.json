@@ -1,7 +1,7 @@
 [
   {
     "title": "OGs",
-    "description": "Only selected OGs can mint",
+    "description": "Only selected OG members can mint",
     "groups": [
       {
         "label": "OGs"
