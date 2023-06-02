@@ -100,7 +100,7 @@ const Other = styled.div`
 const ImageWrap = styled.div`
   aspect-ratio: 1 / 1;
   width: 100%;
-  background-image: url(https://cdn.vox-cdn.com/thumbor/MBK0-Dd2tLGdpC5MeF9Q80hC3VM=/0x0:1904x796/1200x675/filters:focal(800x246:1104x550)/cdn.vox-cdn.com/uploads/chorus_image/image/66828064/BLOODMACHINES_002.0.jpg);
+  background-image: url("https://cdn.vox-cdn.com/thumbor/MBK0-Dd2tLGdpC5MeF9Q80hC3VM=/0x0:1904x796/1200x675/filters:focal(800x246:1104x550)/cdn.vox-cdn.com/uploads/chorus_image/image/66828064/BLOODMACHINES_002.0.jpg");
   border-radius: 16px;
 `
 const Image = styled.div`
