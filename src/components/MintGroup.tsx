@@ -48,7 +48,7 @@ const MintGroupItem = styled.div`
   align-items: flex-start;
   padding: 16px;
   gap: 32px; 
-  border: 2px solid rgba(78, 68, 206, 0.25);
+  border: 2px solid rgba(8, 199, 118, 0.25);
   border-radius: 8px; 
   width: 100%;
 `
