@@ -96,7 +96,7 @@ const TimerItem = styled.div`
   align-items: center;
   padding: 4px 4px 7px;
   gap: 10px;
-  background: rgba(78, 68, 206, 0.25);
+  background: rgba(8, 199, 118, 0.25);
   border-radius: 4px;
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
