@@ -4,7 +4,7 @@
     "description": "Only selected OG members can mint",
     "groups": [
       {
-        "label": "OGs"
+        "label": "htjrp6"
       }
     ]
   },
@@ -13,7 +13,7 @@
     "description": "Only whitelisted members can mint",
     "groups": [
       {
-        "label": "WLs"
+        "label": "htkame"
       }
     ]
   },
