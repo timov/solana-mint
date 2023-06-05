@@ -424,7 +424,7 @@ export interface HomeProps {
 const candyMachinOps = {
   allowLists: [
     {
-      list: require("../constants/whitelist.json"),
+      list: require("../src/constants/whitelist.json"),
       groupLabel: "OGs",
     },
   ],
