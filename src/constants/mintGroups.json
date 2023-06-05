@@ -4,7 +4,7 @@
     "description": "Only selected OG members can mint",
     "groups": [
       {
-        "label": "htjrp6"
+        "label": "OGs"
       }
     ]
   },
