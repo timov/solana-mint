@@ -94,6 +94,7 @@ export class MerkleTree<T = any> {
   }
 
   verifyProof(idx: number, proof: Buffer[], root: Buffer): boolean {
+    console.log("IN");
     let pair = MerkleTree.nodeHash(this.leafs[idx]);
     for (const item of proof) {
       pair = MerkleTree.internalHash(pair, item);
