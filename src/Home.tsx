@@ -694,7 +694,7 @@ const Home = (props: HomeProps) => {
             </Column>
             <Column>
               <Content>
-                <CollectionName>Collection Name</CollectionName>
+                <CollectionName>Zulu Of Weaves</CollectionName>
                 <InfoRow>
                   {guardStates.isStarted && wallet.publicKey && (
                     <InfoBox>
@@ -702,12 +702,12 @@ const Home = (props: HomeProps) => {
                       <p>{candyMachineV3.items.available}{" "}</p>
                     </InfoBox>)}
                   <IconRow>
-                    <a href="#" target="_blank" rel="noopener noreferrer"><Globe></Globe></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer"><Twitter></Twitter></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer"><Discord></Discord></a>
+                    <a href="https://www.codeoflifecol.com/" target="_blank" rel="noopener noreferrer"><Globe></Globe></a>
+                    <a href="https://twitter.com/codeoflife_COL" target="_blank" rel="noopener noreferrer"><Twitter></Twitter></a>
+                    <a href="https://discord.gg/col" target="_blank" rel="noopener noreferrer"><Discord></Discord></a>
                   </IconRow>
                 </InfoRow>
-                <CollectionDescription>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</CollectionDescription>
+                <CollectionDescription>Mesmerizing collection of digital artworks that transcends the boundaries of reality and explores the ethereal realm of dreams. Each NFT within this collection encapsulates the beauty, complexity, and infinite possibilities of the quantum universe. Dive into a surreal tapestry of vibrant colors, intricate patterns, and elusive symbolism that mirrors the enigmatic nature of our subconscious minds.</CollectionDescription>
               </Content>
               <Other>
 
@@ -718,7 +718,7 @@ const Home = (props: HomeProps) => {
                 ) : !guardStates.isWalletWhitelisted ? (
                   <PrivateWrap>
                     <PrivateText>Mint is private</PrivateText>
-                    <PrivateSubtext>You’re currently not allowed to mint. Try again at a later time.</PrivateSubtext>
+                    <PrivateSubtext>You are currently not allowed to mint. Please try again at a later time.</PrivateSubtext>
                   </PrivateWrap>
                 ) : null}
 
