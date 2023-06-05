@@ -100,7 +100,7 @@ const Other = styled.div`
 const ImageWrap = styled.div`
   aspect-ratio: 1 / 1;
   width: 100%;
-  background-image: url("https://cdn.vox-cdn.com/thumbor/MBK0-Dd2tLGdpC5MeF9Q80hC3VM=/0x0:1904x796/1200x675/filters:focal(800x246:1104x550)/cdn.vox-cdn.com/uploads/chorus_image/image/66828064/BLOODMACHINES_002.0.jpg");
+  background-image: url(https://images.pexels.com/photos/2832432/pexels-photo-2832432.png);
   border-radius: 16px;
 `
 const Image = styled.div`
@@ -366,7 +366,7 @@ const MintGroupItem = styled.div`
   align-items: flex-start;
   padding: 16px;
   gap: 32px; 
-  border: 2px solid rgba(8, 199, 118, 0.25);
+  border: 2px solid rgba(78, 68, 206, 0.25);
   border-radius: 8px; 
   width: -webkit-fill-available;
 `
@@ -376,7 +376,7 @@ flex-direction: column;
 align-items: flex-start;
 padding: 16px;
 gap: 32px; 
-border: 2px solid rgba(8, 199, 118, 1);
+border: 2px solid rgba(78, 68, 206, 1);
 border-radius: 8px; 
 width: -webkit-fill-available;
 `
@@ -425,7 +425,7 @@ const candyMachinOps = {
   allowLists: [
     {
       list: require("../cmv3-demo-initialization/allowlist.json"),
-      groupLabel: "waoed",
+      groupLabel: "OGs",
     },
   ],
 };
@@ -693,7 +693,7 @@ const Home = (props: HomeProps) => {
             </Column>
             <Column>
               <Content>
-                <CollectionName>Syna Of Symph</CollectionName>
+                <CollectionName>Collection Name</CollectionName>
                 <InfoRow>
                   {guardStates.isStarted && wallet.publicKey && (
                     <InfoBox>
@@ -706,7 +706,7 @@ const Home = (props: HomeProps) => {
                     <a href="#" target="_blank" rel="noopener noreferrer"><Discord></Discord></a>
                   </IconRow>
                 </InfoRow>
-                <CollectionDescription>Mesmerizing collection of digital artworks that transcends the boundaries of reality and explores the ethereal realm of dreams. Each NFT within this collection encapsulates the beauty, complexity, and infinite possibilities of the quantum universe. Dive into a surreal tapestry of vibrant colors, intricate patterns, and elusive symbolism that mirrors the enigmatic nature of our subconscious minds. Immerse yourself in a kaleidoscope of imagination, where dreams intertwine with quantum physics, creating a captivating visual experience that defies conventional understanding.</CollectionDescription>
+                <CollectionDescription>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</CollectionDescription>
               </Content>
               <Other>
 
