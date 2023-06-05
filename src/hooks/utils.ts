@@ -313,10 +313,12 @@ export const parseGuardGroup = async (
     if (guardsInput.addressGate) allowed.push(guardsInput.addressGate.address);
 
     if (guardsInput.allowList?.merkleRoot) {
+      console.log(guardsInput.allowList?.merkleRoot);
       const isValid = verifyProof(
         guardsInput.allowList.merkleRoot,
         label || "default"
       );
+      console.log(isValid);
       if (isValid) allowed.push(walletAddress);
     }
 
@@ -470,7 +472,7 @@ export const parseGuardStates = ({
       x.equals(walletAddress)
     );
     if (!states.isWalletWhitelisted)
-      // states.messages.push(`Mint not allowed!`);
+      states.messages.push(`Mint not allowed!`);
   }
 
   if (guards.gatekeeperNetwork) {
