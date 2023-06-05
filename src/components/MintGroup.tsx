@@ -1,5 +1,7 @@
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
+import { useCallback } from "react";
 import { PublicKey } from "@solana/web3.js";
+import confetti from "canvas-confetti";
 import React from "react";
 import { CandyMachineV3, NftPaymentMintSettings } from "../hooks/types";
 import { MultiMintButton } from "../MultiMintButton";
@@ -10,6 +12,7 @@ import { Paper } from "@material-ui/core";
 import { GatewayProvider } from "@civic/solana-gateway-react";
 import { useEffect, useMemo, useState } from "react";
 import { DefaultCandyGuardRouteSettings, Nft } from "@metaplex-foundation/js";
+import { defaultGuardGroup, network } from "../config";
 
 const MintedByYou = styled.span`
   font-style: italic;
@@ -153,6 +156,29 @@ export default function MintGroup({
     ]
   );
 
+  useEffect(() => {
+    if (mintedItems?.length === 0) throwConfetti();
+  }, [mintedItems]);
+
+  const openOnSolscan = useCallback((mint) => {
+    window.open(
+      `https://solscan.io/address/${mint}${[WalletAdapterNetwork.Devnet, WalletAdapterNetwork.Testnet].includes(
+        network
+      )
+        ? `?cluster=${network}`
+        : ""
+      }`
+    );
+  }, []);
+
+  const throwConfetti = useCallback(() => {
+    confetti({
+      particleCount: 400,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+  }, [confetti]);
+
   const startMint = React.useCallback(
     async (quantityString: number = 1) => {
       const nftGuards: NftPaymentMintSettings[] = Array(quantityString)
@@ -186,8 +212,6 @@ export default function MintGroup({
         })
         .then((items) => {
           setMintedItems(items as any);
-          console.log("CONFETTI! MINT");
-          console.log(items);
         })
         .catch(
           (e) => console.error("mint error", e)
