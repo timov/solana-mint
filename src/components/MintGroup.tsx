@@ -158,7 +158,7 @@ export default function MintGroup({
   );
 
   useEffect(() => {
-    if (mintedItems?.length === 0) throwConfetti();
+    if (mintedItems?.length) throwConfetti();
   }, [mintedItems]);
 
   const openOnSolscan = useCallback((mint) => {
