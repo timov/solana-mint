@@ -183,7 +183,7 @@ export default function MintGroup({
         })
         .then((items) => {
           // setMintedItems(items as any);
-          console.log("minted", items);
+          // console.log("minted", items);
         })
         .catch(
           (e) => console.error("mint error", e)
