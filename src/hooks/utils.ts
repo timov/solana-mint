@@ -307,7 +307,8 @@ export const parseGuardGroup = async (
   }
 
   // Check for whitelisted addresses
-
+  console.log("allow list");
+  console.log(guardsInput.allowList);
   if (guardsInput.addressGate || guardsInput.allowList) {
     let allowed: PublicKey[] = [];
     if (guardsInput.addressGate) allowed.push(guardsInput.addressGate.address);
