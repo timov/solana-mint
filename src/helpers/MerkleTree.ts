@@ -98,7 +98,8 @@ export class MerkleTree<T = any> {
     for (const item of proof) {
       pair = MerkleTree.internalHash(pair, item);
     }
-
+    console.log(pair);
+    console.log(root);
     return pair.equals(root);
   }
 
