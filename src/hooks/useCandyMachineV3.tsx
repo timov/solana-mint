@@ -98,6 +98,8 @@ export default function useCandyMachineV3(
         },
       };
     }
+    console.log(candyMachineOpts.allowLists);
+    console.log(getMerkleTree(candyMachineOpts.allowLists[0]));
     const merkles: GuardMerkles = candyMachineOpts.allowLists.reduce(
       (prev, { groupLabel, list }) =>
         Object.assign(prev, {
@@ -113,9 +115,8 @@ export default function useCandyMachineV3(
       label = "default"
     ) => {
       let merkle = merkles[label];
-      console.log(merkles);
-      console.log("MERKLE!");
       if (!merkle) return;
+      console.log("MERKLE!");
       const verifiedProof = !!merkle.proof.length;
       const compareRoot = merkle.tree.getRoot().equals(Buffer.from(merkleRoot));
       console.log(verifiedProof);
