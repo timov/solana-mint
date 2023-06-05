@@ -8,7 +8,8 @@ import styled from "styled-components";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { Paper } from "@material-ui/core";
 import { GatewayProvider } from "@civic/solana-gateway-react";
-
+import { useEffect, useMemo, useState } from "react";
+import { DefaultCandyGuardRouteSettings, Nft } from "@metaplex-foundation/js";
 
 const MintedByYou = styled.span`
   font-style: italic;
@@ -119,6 +120,8 @@ export default function MintGroup({
   const { connection } = useConnection();
   const wallet = useWallet();
 
+  const [mintedItems, setMintedItems] = useState<Nft[]>();
+
   const { guards, guardStates, prices } = React.useMemo(
     () => ({
       guards:
@@ -182,7 +185,7 @@ export default function MintGroup({
           nftGuards,
         })
         .then((items) => {
-          // setMintedItems(items as any);
+          setMintedItems(items as any);
           // console.log("minted", items);
         })
         .catch(
