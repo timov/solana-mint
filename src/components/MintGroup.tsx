@@ -13,6 +13,7 @@ import { GatewayProvider } from "@civic/solana-gateway-react";
 import { useEffect, useMemo, useState } from "react";
 import { DefaultCandyGuardRouteSettings, Nft } from "@metaplex-foundation/js";
 import { defaultGuardGroup, network } from "../config";
+import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 
 const MintedByYou = styled.span`
   font-style: italic;
