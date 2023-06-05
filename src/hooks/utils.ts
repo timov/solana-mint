@@ -310,15 +310,19 @@ export const parseGuardGroup = async (
   console.log("allow list");
   console.log(guardsInput.allowList);
   if (guardsInput.addressGate || guardsInput.allowList) {
+    console.log("yes");
+    
     let allowed: PublicKey[] = [];
     if (guardsInput.addressGate) allowed.push(guardsInput.addressGate.address);
 
     if (guardsInput.allowList?.merkleRoot) {
+      console.log("yes");
       const isValid = verifyProof(
         guardsInput.allowList.merkleRoot,
         label || "default"
       );
       if (isValid) allowed.push(walletAddress);
+      console.log(isValid);
     }
 
     guardsParsed.allowed = allowed;
