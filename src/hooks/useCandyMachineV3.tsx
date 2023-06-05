@@ -99,7 +99,6 @@ export default function useCandyMachineV3(
       };
     }
     console.log(candyMachineOpts.allowLists);
-    console.log(getMerkleTree(candyMachineOpts.allowLists[0]));
     const merkles: GuardMerkles = candyMachineOpts.allowLists.reduce(
       (prev, { groupLabel, list }) =>
         Object.assign(prev, {
