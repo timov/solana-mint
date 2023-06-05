@@ -424,7 +424,7 @@ export interface HomeProps {
 const candyMachinOps = {
   allowLists: [
     {
-      list: require("../cmv3-demo-initialization/allowlist.json"),
+      list: require("../constants/whitelist.json"),
       groupLabel: "OGs",
     },
   ],
