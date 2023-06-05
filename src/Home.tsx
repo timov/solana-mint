@@ -100,7 +100,7 @@ const Other = styled.div`
 const ImageWrap = styled.div`
   aspect-ratio: 1 / 1;
   width: 100%;
-  background-image: url(https://arweave.net/8XpjSum2sOi7Zm64HUUT4RgajhXrv6SNlvDMWLveAD4?ext=png);
+  background-image: url(https://images.pexels.com/photos/2832432/pexels-photo-2832432.png);
   border-radius: 16px;
 `
 const Image = styled.div`
@@ -694,7 +694,7 @@ const Home = (props: HomeProps) => {
             </Column>
             <Column>
               <Content>
-                <CollectionName>Zulu Of Weaves</CollectionName>
+                <CollectionName>Collection Name</CollectionName>
                 <InfoRow>
                   {guardStates.isStarted && wallet.publicKey && (
                     <InfoBox>
@@ -707,7 +707,7 @@ const Home = (props: HomeProps) => {
                     <a href="#" target="_blank" rel="noopener noreferrer"><Discord></Discord></a>
                   </IconRow>
                 </InfoRow>
-                <CollectionDescription>Mesmerizing collection of digital artworks that transcends the boundaries of reality and explores the ethereal realm of dreams. Each NFT within this collection encapsulates the beauty, complexity, and infinite possibilities of the quantum universe. Dive into a surreal tapestry of vibrant colors, intricate patterns, and elusive symbolism that mirrors the enigmatic nature of our subconscious minds.</CollectionDescription>
+                <CollectionDescription>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</CollectionDescription>
               </Content>
               <Other>
 
@@ -741,11 +741,6 @@ const Home = (props: HomeProps) => {
                         </MintGroupItem>
                   ))} 
                 </MintGroupWrap> )}
-                <NftsModal
-                  openOnSolscan={openOnSolscan}
-                  mintedItems={mintedItems || []}
-                  setMintedItems={setMintedItems}
-                />
               </Other>
             </Column>
           </Container>
