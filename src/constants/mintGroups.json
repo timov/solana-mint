@@ -9,15 +9,6 @@
     ]
   },
   {
-    "title": "WLs",
-    "description": "Only whitelisted members can mint",
-    "groups": [
-      {
-        "label": "htkame"
-      }
-    ]
-  },
-  {
     "title": "Public",
     "description": "Everyone can mint!",
     "groups": [
