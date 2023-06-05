@@ -187,6 +187,7 @@ export default function MintGroup({
         .then((items) => {
           setMintedItems(items as any);
           console.log("CONFETTI! MINT");
+          console.log(items);
         })
         .catch(
           (e) => console.error("mint error", e)
