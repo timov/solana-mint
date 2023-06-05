@@ -14,6 +14,7 @@ import { useEffect, useMemo, useState } from "react";
 import { DefaultCandyGuardRouteSettings, Nft } from "@metaplex-foundation/js";
 import { defaultGuardGroup, network } from "../config";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
+import NftsModal from "../NftsModal";
 
 const MintedByYou = styled.span`
   font-style: italic;
@@ -278,6 +279,11 @@ export default function MintGroup({
               ) : (
                 <MintButton />
               )}
+              <NftsModal
+                  openOnSolscan={openOnSolscan}
+                  mintedItems={mintedItems || []}
+                  setMintedItems={setMintedItems}
+                />
             </>
           </>
         )}
