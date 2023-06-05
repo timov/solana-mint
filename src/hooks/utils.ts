@@ -313,12 +313,10 @@ export const parseGuardGroup = async (
     if (guardsInput.addressGate) allowed.push(guardsInput.addressGate.address);
 
     if (guardsInput.allowList?.merkleRoot) {
-      console.log(guardsInput.allowList?.merkleRoot);
       const isValid = verifyProof(
         guardsInput.allowList.merkleRoot,
         label || "default"
       );
-      console.log(isValid);
       if (isValid) allowed.push(walletAddress);
     }
 
