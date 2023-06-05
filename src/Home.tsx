@@ -489,6 +489,7 @@ const Home = (props: HomeProps) => {
   }, [wallet, connection]);
 
   useEffect(() => {
+    console.log("CONFETTI!");
     if (mintedItems?.length === 0) throwConfetti();
   }, [mintedItems]);
 
