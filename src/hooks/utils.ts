@@ -466,9 +466,12 @@ export const parseGuardStates = ({
 
   // Check for whitelisted addresses
   if (guards.allowed) {
+    console.log(guards.allowed);
+    console.log(guards.allowList);
     states.isWalletWhitelisted = !!guards.allowed.find((x) =>
       x.equals(walletAddress)
     );
+    console.log(states.isWalletWhitelisted);
     if (!states.isWalletWhitelisted)
       states.messages.push(`Mint not allowed!`);
   }
