@@ -9,6 +9,15 @@
     ]
   },
   {
+    "title": "WLs",
+    "description": "Only selected whitelist members can mint",
+    "groups": [
+      {
+        "label": "WLs"
+      }
+    ]
+  },
+  {
     "title": "Public",
     "description": "Everyone can mint!",
     "groups": [
