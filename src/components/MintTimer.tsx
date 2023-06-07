@@ -207,10 +207,7 @@ export default function MintGroup({
             ) : null}
 
             {guardStates.isStarted && guards.endTime && !guardStates.isEnded ? (
-                 <svg height="100" width="100" class="blinking">
-  <circle cx="50" cy="50" r="10" fill="red" />
-  Sorry, your browser does not support inline SVG.  
-</svg> <MintTimerWrap>LIVE</MintTimerWrap>
+                 <MintTimerWrap>LIVE</MintTimerWrap>
             ) : null}
 
             {guardStates.isEnded ? (
