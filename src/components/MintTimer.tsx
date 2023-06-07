@@ -207,22 +207,12 @@ export default function MintGroup({
             ) : null}
 
             {guardStates.isStarted && guards.endTime && !guardStates.isEnded ? (
-                <MintTimerWrap> Ends in
-                <Countdown
-                    date={guards.endTime}
-                    renderer={renderMintTimer}
-                    onComplete={() => {
-                        candyMachineV3.refresh();
-                    }}
-                />
-                </MintTimerWrap>
+                <MintTimerWrap>LIVE</MintTimerWrap>
             ) : null}
 
             {guardStates.isEnded ? (
                 <MintTimerWrapEnded>Ended</MintTimerWrapEnded>
             ) : null}
-
-
         </div>
     );
 }
