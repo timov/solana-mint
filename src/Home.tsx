@@ -100,7 +100,7 @@ const Other = styled.div`
 const ImageWrap = styled.div`
   aspect-ratio: 1 / 1;
   width: 100%;
-  background-image: url(https://images.pexels.com/photos/2832432/pexels-photo-2832432.png);
+  background-image: url(https://tvwm4hrqyofaboii4opkzty6xqlar27efpt4hakdqufqa5sls6za.arweave.net/nWzOHjDDigC5COOerM8evBYI6-Qr58OBQ4ULAHZLl7I);
   border-radius: 16px;
 `
 const Image = styled.div`
@@ -694,7 +694,7 @@ const Home = (props: HomeProps) => {
             </Column>
             <Column>
               <Content>
-                <CollectionName>Zulu Of Weaves</CollectionName>
+                <CollectionName>Abstract Of Art</CollectionName>
                 <InfoRow>
                   {guardStates.isStarted && wallet.publicKey && (
                     <InfoBox>
@@ -707,7 +707,7 @@ const Home = (props: HomeProps) => {
                     <a href="https://discord.gg/col" target="_blank" rel="noopener noreferrer"><Discord></Discord></a>
                   </IconRow>
                 </InfoRow>
-                <CollectionDescription>Mesmerizing collection of digital artworks that transcends the boundaries of reality and explores the ethereal realm of dreams. Each NFT within this collection encapsulates the beauty, complexity, and infinite possibilities of the quantum universe. Dive into a surreal tapestry of vibrant colors, intricate patterns, and elusive symbolism that mirrors the enigmatic nature of our subconscious minds.</CollectionDescription>
+                <CollectionDescription>A non-objective art, which does not have an accurate representation of a visual reality, but uses Forms, Colors, Textures and Gesture Marks to achieve its effect. It was born at the beginning of the 20th century and was completely radical for its time.</CollectionDescription>
               </Content>
               <Other>
 
