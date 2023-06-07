@@ -102,6 +102,7 @@ const ImageWrap = styled.div`
   width: 100%;
   background-image: url(https://tvwm4hrqyofaboii4opkzty6xqlar27efpt4hakdqufqa5sls6za.arweave.net/nWzOHjDDigC5COOerM8evBYI6-Qr58OBQ4ULAHZLl7I);
   border-radius: 16px;
+  background-size: cover;
 `
 const Image = styled.div`
   height: 100%
