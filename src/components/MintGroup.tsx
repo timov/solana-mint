@@ -314,11 +314,6 @@ export default function MintGroup({
               ) : (
                 <MintButton />
               )}
-              <NftsModal
-                  openOnSolscan={openOnSolscan}
-                  mintedItems={mintedItems || []}
-                  setMintedItems={setMintedItems}
-                />
             </>
           </>
         )}
