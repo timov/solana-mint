@@ -114,6 +114,38 @@ const TimerItem = styled.div`
   min-width: 25px;
   min-height: 23px;
 `
+const PrivateWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: -webkit-fill-available;
+`
+const PrivateText = styled.h2`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  gap: 10px;
+  background: var(--error);
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: var(--white);
+  width: -webkit-fill-available;
+`
+const PrivateSubtext = styled.p`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--white);
+`
 
 export default function MintGroup({
   mintGroup,
@@ -255,7 +287,10 @@ export default function MintGroup({
       ) : // ) : !guardStates.canPayFor ? (
         //   <h1>You cannot pay for the mint</h1>
         !guardStates.isWalletWhitelisted ? (
-          <h1>Mint is private.</h1>
+          <PrivateWrap>
+                    <PrivateText>Mint is private!</PrivateText>
+                    <PrivateSubtext>You are currently not allowed to mint. Please try again at a later time.</PrivateSubtext>
+                  </PrivateWrap>
         ) : (
           <>
             <>
