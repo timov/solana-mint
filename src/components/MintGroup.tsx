@@ -54,7 +54,7 @@ const MintGroupItem = styled.div`
   align-items: flex-start;
   padding: 16px;
   gap: 32px; 
-  border: 2px solid rgba(8, 199, 118, 0.25);
+  border: 2px solid rgba(29, 215, 155, 0.25);
   border-radius: 8px; 
   width: 100%;
 `
@@ -102,7 +102,7 @@ const TimerItem = styled.div`
   align-items: center;
   padding: 4px 4px 7px;
   gap: 10px;
-  background: rgba(8, 199, 118, 0.25);
+  background: rgba(29, 215, 155, 0.25);
   border-radius: 4px;
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
