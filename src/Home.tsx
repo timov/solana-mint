@@ -39,15 +39,15 @@ import mintGroups from "./constants/mintGroups.json";
 
 
 const BorderLinearProgress = styled(LinearProgress)`
-  height: 16px !important;
+  height: 20px !important;
   border-radius: 30px;
-  background-color: var(--alt-background-color) !important;
+  background-color: #1b1b1b !important;
   > div.MuiLinearProgress-barColorPrimary{
-    background-color: var(--primary) !important;
+    background-color: #00d97e !important;
   }
   > div.MuiLinearProgress-bar1Determinate {
     border-radius: 30px !important;
-    background-color: var(--primary);
+    background-color: #00d97e;
   }
 `;
 const Header = styled.div`
@@ -131,18 +131,18 @@ const InfoRow = styled.div`
   flex-wrap: wrap;
 `
 const InfoBox = styled.div`
+  background-color: #303030;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 10px 16px;
   gap: 8px;
-  border: 2px solid #FFFFFF;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   font-weight: 600;
   font-size: 20px;
   line-height: 100%;
   text-transform: uppercase;
-  color: var(--white);
+  color: #b45be1;
 
   @media only screen and (max-width: 450px) {
     font-size: 18px;
@@ -266,7 +266,7 @@ const PrivateText = styled.h2`
   padding: 16px 24px;
   gap: 10px;
   background: var(--error);
-  border-radius: 4px;
+  border-radius: 0.5rem;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -332,18 +332,17 @@ const ConnectWallet = styled(WalletMultiButton)`
   width: 100%;
   height: fit-content;
   background-color: var(--primary) !important;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 150%;
   text-transform: uppercase;
-  color: var(--white) !important;
+  color: #121212 !important;
   transition: 0.2s;
   :hover {
-    background-color: var(--primary) !important;
+    background-color: #b45be1 !important;
     color: var(--white) !important;
-    opacity: 0.9;
   }
 `
 const ColumnInner = styled.div`
@@ -367,9 +366,9 @@ const MintGroupItem = styled.div`
   align-items: flex-start;
   padding: 16px;
   gap: 32px; 
-  border: 2px solid rgba(29, 215, 155, 0.25);
   border-radius: 8px; 
   width: -webkit-fill-available;
+  background-color: #1b1b1b;
 `
 const MintGroupItemActive = styled.div`
 display: flex;
@@ -400,7 +399,7 @@ const MintGroupDescription = styled.p`
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
-  color: var(--white);
+  color: #717171;
 `
 const MintGroupHeader = styled.div`
   display: flex;
@@ -699,7 +698,7 @@ const Home = (props: HomeProps) => {
                 <InfoRow>
                   {guardStates.isStarted && wallet.publicKey && (
                     <InfoBox>
-                      <p>Total items</p>
+                      <p>Total items:</p>
                       <p>{candyMachineV3.items.available}{" "}</p>
                     </InfoBox>)}
                   <IconRow>

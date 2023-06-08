@@ -23,7 +23,7 @@ export const Action = styled.button`
   padding: 10px 16px;
   gap: 10px;
   background: var(--primary);
-  border-radius: 4px;
+  border-radius: 0.5rem;
   border: none;
   font-family: 'Plus Jakarta Sans';
   font-style: normal;

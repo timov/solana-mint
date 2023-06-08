@@ -27,8 +27,8 @@ const ConnectButton = styled(WalletMultiButton)`
   border-radius: 5px !important;
   padding: 6px 16px;
   background-color: #fff;
-  color: #000;
   margin: 0 auto;
+  color: #303030;
 `;
 
 const Card = styled(Paper)`
@@ -103,7 +103,7 @@ const TimerItem = styled.div`
   padding: 4px 4px 7px;
   gap: 10px;
   background: rgba(29, 215, 155, 0.25);
-  border-radius: 4px;
+  border-radius: 0.5rem;
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 600;
@@ -130,7 +130,7 @@ const PrivateText = styled.h2`
   padding: 16px 24px;
   gap: 10px;
   background: var(--error);
-  border-radius: 4px;
+  border-radius: 0.5rem;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;

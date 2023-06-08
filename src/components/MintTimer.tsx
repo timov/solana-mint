@@ -21,6 +21,31 @@ const MintTimerWrap = styled.div`
   text-transform: uppercase;
   color: var(--white);
 `
+const MintTimerWrapLive = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #00d97e;
+`
+const MintTimerWrapEnd = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #e63757;
+`
+
 const MintTimerWrapEnded = styled.div`
   display: flex;
   flex-direction: row;
@@ -46,11 +71,8 @@ const TimerItem = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 4px 4px 7px;
   gap: 10px;
-  background: rgba(8, 199, 118, 0.25);
-  border-radius: 4px;
-  font-family: 'Plus Jakarta Sans';
+  border-radius: 0.5rem;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -191,7 +213,7 @@ export default function MintGroup({
     return (
         <div>
             {!guardStates.isStarted && !guardStates.isEnded ? (
-                <MintTimerWrap> Starts in
+                <MintTimerWrap> Launches in
                 <Countdown
                     date={guards.startTime}
                     renderer={renderMintTimer}
@@ -203,15 +225,15 @@ export default function MintGroup({
             ) : null}
 
             {guardStates.isStarted && !guards.endTime ? (
-                <MintTimerWrap>LIVE</MintTimerWrap>
+                <MintTimerWrapLive>LIVE</MintTimerWrapLive>
             ) : null}
 
             {guardStates.isStarted && guards.endTime && !guardStates.isEnded ? (
-                  <MintTimerWrap>LIVE</MintTimerWrap>
+                <MintTimerWrapLive>LIVE</MintTimerWrapLive>
             ) : null}
 
             {guardStates.isEnded ? (
-                <MintTimerWrapEnded>Ended</MintTimerWrapEnded>
+                <MintTimerWrapEnded>ENDED</MintTimerWrapEnded>
             ) : null}
         </div>
     );

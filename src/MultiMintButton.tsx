@@ -65,7 +65,7 @@ export const CTAButton = styled.button`
 export const ButtonWrap = styled.div`
   padding: 16px 24px;
   background-color: var(--primary);
-  border-radius: 4px;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

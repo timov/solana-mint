@@ -1,11 +1,11 @@
 /* Need to change colors? Do it here, these are the main colors that are used all over the website */
 :root {
-  --main-background-color: #1e2423;
-  --alt-background-color: #161b19;
+  --main-background-color: #121212;
+  --alt-background-color: #121212;
   --white: #fff;
-  --black: #161b19;
-  --primary: #1e2423;
-  --error: #D92D20;
+  --black: #121212;
+  --primary: #00d97e;
+  --error: #e63757;
 }
 
 /* Font: Plus Jakarta Sans is being loaded here from Google Fonts and is used all over the website */
@@ -78,49 +78,4 @@ h1, h2, h3, h4, h5, h6, p {
   -o-animation: 1s blink ease infinite;
   animation: 1s blink ease infinite;
   
-}
-
-@keyframes "blink" {
-  from, to {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes blink {
-  from, to {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes "blink" {
-  from, to {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes "blink" {
-  from, to {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes "blink" {
-  from, to {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
 }
