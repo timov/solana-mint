@@ -367,7 +367,7 @@ const MintGroupItem = styled.div`
   align-items: flex-start;
   padding: 16px;
   gap: 32px; 
-  border: 2px solid rgba(8, 199, 118, 0.25);
+  border: 2px solid rgba(29, 215, 155, 0.25);
   border-radius: 8px; 
   width: -webkit-fill-available;
 `
@@ -377,7 +377,7 @@ flex-direction: column;
 align-items: flex-start;
 padding: 16px;
 gap: 32px; 
-border: 2px solid rgba(8, 199, 118, 1);
+border: 2px solid rgba(29, 215, 155, 1);
 border-radius: 8px; 
 width: -webkit-fill-available;
 `
