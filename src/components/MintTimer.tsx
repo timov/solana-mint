@@ -19,7 +19,7 @@ const MintTimerWrap = styled.div`
   font-size: 16px;
   line-height: 100%;
   text-transform: uppercase;
-  color: var(--white);
+  color: #b45be1;
 `
 const MintTimerWrapLive = styled.div`
   display: flex;
