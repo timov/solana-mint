@@ -497,7 +497,6 @@ const Home = (props: HomeProps) => {
   }, [wallet, connection]);
 
   useEffect(() => {
-    console.log("CONFETTI!");
     if (mintedItems?.length === 0) throwConfetti();
   }, [mintedItems]);
 
@@ -544,7 +543,7 @@ const Home = (props: HomeProps) => {
           };
         });
 
-      console.log({ nftGuards });
+      // console.log({ nftGuards });
       // debugger;
       candyMachineV3
         .mint(quantityString, {
@@ -566,7 +565,7 @@ const Home = (props: HomeProps) => {
   );
 
   useEffect(() => {
-    console.log({ candyMachine: candyMachineV3.candyMachine });
+    // console.log({ candyMachine: candyMachineV3.candyMachine });
   }, [candyMachineV3.candyMachine]);
 
   const MintButton = ({

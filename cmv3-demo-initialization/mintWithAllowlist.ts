@@ -38,7 +38,7 @@ const mintingWallet = metaplex.identity().publicKey;
     // merkleProof,
     merkleProof.map((p) => new PublicKey(p).toString())
   );
-  if (!merkleProof.length) return console.log("User is not in allowed list");
+  if (!merkleProof.length) return;// console.log("User is not in allowed list");
   //   await metaplex.candyMachines().callGuardRoute({
   //     candyMachine,
   //     guard: "allowList",
@@ -99,7 +99,7 @@ const mintingWallet = metaplex.identity().publicKey;
   await metaplex.rpc().sendAndConfirmTransaction(allowListCallGuardRouteTx, {
     commitment: "processed",
   });
-  console.log(signedTransactions);
+  // console.log(signedTransactions);
   const output = await Promise.all(
     signedTransactions.map((tx, i) => {
       return metaplex
@@ -124,5 +124,5 @@ const mintingWallet = metaplex.identity().publicKey;
           .catch((e) => null)
     )
   );
-  console.log(nfts);
+  // console.log(nfts);
 })();

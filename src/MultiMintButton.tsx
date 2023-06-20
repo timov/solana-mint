@@ -250,7 +250,7 @@ export const MultiMintButton = ({
 
   useEffect(() => {
     if (waitForActiveToken && gatewayStatus === GatewayStatus.ACTIVE) {
-      console.log("Minting after token active");
+      // console.log("Minting after token active");
       setWaitForActiveToken(false);
       onMint(mintCount);
     }

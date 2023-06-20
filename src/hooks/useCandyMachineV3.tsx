@@ -98,7 +98,6 @@ export default function useCandyMachineV3(
         },
       };
     }
-    console.log(candyMachineOpts.allowLists);
     const merkles: GuardMerkles = candyMachineOpts.allowLists.reduce(
       (prev, { groupLabel, list }) =>
         Object.assign(prev, {
@@ -342,10 +341,6 @@ export default function useCandyMachineV3(
   React.useEffect(() => {
     const walletAddress = wallet.publicKey;
     if (!walletAddress || !candyMachine) return;
-    console.log(
-      "useEffact([mx, wallet, nftHoldings, proofMemo, candyMachine])"
-    );
-
     (async () => {
       const guards = {
         default: await parseGuardGroup(
@@ -384,7 +379,6 @@ export default function useCandyMachineV3(
     // };
     return Object.entries(guardsAndGroups).reduce(
       (groupPayments, [label, guards]) => {
-        // console.log(label, guards);
         return Object.assign(groupPayments, {
           [label]: guardToPaymentUtil(guards),
         });

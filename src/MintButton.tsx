@@ -61,12 +61,12 @@ export const MintButton = ({
     ) {
       setIsMinting(true);
     }
-    console.log("change: ", GatewayStatus[gatewayStatus]);
+    // console.log("change: ", GatewayStatus[gatewayStatus]);
   }, [previousGatewayStatus, gatewayStatus, setIsMinting]);
 
   useEffect(() => {
     if (waitForActiveToken && gatewayStatus === GatewayStatus.ACTIVE) {
-      console.log("Minting after token active");
+      // console.log("Minting after token active");
       setWaitForActiveToken(false);
       onMint(1);
     }
