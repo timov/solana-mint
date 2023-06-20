@@ -85,7 +85,7 @@ export const NumberWrap = styled.div`
   align-items: stretch;
   padding: 16px;
   gap: 8px;
-  background: #00d97e;
+  background: rgb(180, 91, 225);
   border-radius: 6px;  
 `
 
@@ -106,7 +106,7 @@ export const NumberInput = styled.div`
   align-items: center;
   padding: 16px;
   gap: 20px;
-  background: #00d97e;
+  background: rgb(180, 91, 225);
   border-radius: 6px;
 `
 export const NumericField = styled.input`
