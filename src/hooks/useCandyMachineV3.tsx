@@ -127,7 +127,7 @@ export default function useCandyMachineV3(
     };
     return {
       merkles,
-      verifyProof,
+      verifyProof
     };
   }, [wallet.publicKey, candyMachineOpts.allowLists?.length]);
 
