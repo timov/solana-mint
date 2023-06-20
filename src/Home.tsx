@@ -424,10 +424,18 @@ export interface HomeProps {
 const candyMachinOps = {
   allowLists: [
     {
-      list: require("../src/constants/whitelist.json"),
-      groupLabel: "Public",
+      list: require("../src/constants/whitelist-ogs.json"),
+      groupLabel: "OGs",
     },
-  ],
+    {
+      list: require("../src/constants/whitelist-wls.json"),
+      groupLabel: "WLs",
+    },
+    {
+      list: require("../src/constants/whitelist-public.json"),
+      groupLabel: "Public",
+    }
+  ]
 };
 const Home = (props: HomeProps) => {
   const { connection } = useConnection();
@@ -715,7 +723,11 @@ const Home = (props: HomeProps) => {
                   <ConnectWallet>Connect Wallet</ConnectWallet>
                   // ) : !guardStates.canPayFor ? (
                   //   <h1>You cannot pay for the mint</h1>
-                ) : null}
+                ) : !guardStates.isWalletWhitelisted ? (
+                  <PrivateWrap>
+                    <PrivateText>Mint is private</PrivateText>
+                    <PrivateSubtext>You are currently not allowed to mint. Please try again at a later time.</PrivateSubtext>
+                  </PrivateWrap> ) : null}
 
               {guardStates.isStarted && wallet.publicKey && (
                 <MintGroupWrap className="mintGroupWrap">

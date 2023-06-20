@@ -284,7 +284,14 @@ export default function MintGroup({
         <MintGroupTop>
    {!wallet?.publicKey ? (
         <ConnectButton>Connect Wallet</ConnectButton>
-      ) : (
+        ) : // ) : !guardStates.canPayFor ? (
+          //   <h1>You cannot pay for the mint</h1>
+          !guardStates.isWalletWhitelisted ? (
+            <PrivateWrap>
+                      <PrivateText>Mint is private!</PrivateText>
+                      <PrivateSubtext>You are currently not allowed to mint. Please try again at a later time.</PrivateSubtext>
+                    </PrivateWrap>
+          ) : (
           <>
             <>
               {!!candyMachineV3.items.remaining &&
