@@ -425,7 +425,7 @@ const candyMachinOps = {
   allowLists: [
     {
       list: require("../src/constants/whitelist.json"),
-      groupLabel: "OGs",
+      groupLabel: "Public",
     },
   ],
 };

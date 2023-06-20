@@ -376,7 +376,7 @@ export const parseGuardStates = ({
         : 10;
     states.isLimitReached = !canPayFor;
     if (!canPayFor)
-      states.messages.push("Limit reached!");
+      states.messages.push("Mint limit is reached!");
     states.canPayFor = Math.min(states.canPayFor, canPayFor);
   }
 
@@ -387,7 +387,7 @@ export const parseGuardStates = ({
       0
     );
     states.isLimitReached = !canPayFor;
-    if (!canPayFor) states.messages.push("Limit reached!");
+    if (!canPayFor) states.messages.push("Mint limit is reached!");
     states.canPayFor = Math.min(states.canPayFor, canPayFor);
   }
 
@@ -471,13 +471,11 @@ export const parseGuardStates = ({
 
   // Check for whitelisted addresses
   if (guards.allowed) {
-    console.log("Guards allowed:");
-    console.log(guards.allowed);
     states.isWalletWhitelisted = !!guards.allowed.find((x) =>
       x.equals(walletAddress)
     );
-    // if (!states.isWalletWhitelisted)
-    //   states.messages.push(`Mint not allowed!`);
+    if (!states.isWalletWhitelisted)
+      states.messages.push(`Mint not allowed!`);
   }
 
   if (guards.gatekeeperNetwork) {

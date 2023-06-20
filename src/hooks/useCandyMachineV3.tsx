@@ -94,7 +94,7 @@ export default function useCandyMachineV3(
       return {
         merkles: {},
         verifyProof() {
-          return true;
+          return false;
         },
       };
     }
@@ -114,16 +114,10 @@ export default function useCandyMachineV3(
       label = "default"
     ) => {
       let merkle = merkles[label];
-      console.log(label);
       if (!merkle) return;
-      console.log("MERKLE!");
-      let hex = Buffer.from(merkleRoot).toString('hex');
-      console.log(hex);
       const verifiedProof = !!merkle.proof.length;
       const compareRoot = merkle.tree.getRoot().equals(Buffer.from(merkleRoot));
-      console.log(verifiedProof);
-      console.log(compareRoot);
-      return true;
+      return verifiedProof && compareRoot;
     };
     return {
       merkles,
