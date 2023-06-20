@@ -72,7 +72,7 @@ export const MintButton = ({
     }
   }, [waitForActiveToken, gatewayStatus, onMint]);
 
-  return (
+  return ( !candyMachine ? null :
     <CTAButton
       disabled={loading || isSoldOut || isMinting || isEnded || !isActive || limitReached}
       onClick={async () => {

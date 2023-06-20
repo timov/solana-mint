@@ -308,7 +308,7 @@ export const MultiMintButton = ({
       mintCount > limit,
     [loading, isSoldOut, isMinting, isEnded, !isActive]
   );
-  return (
+  return ( !candyMachine ? null :
     <div className="w-100">
       <div className="w-100">
         <ButtonWrap>
