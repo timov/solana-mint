@@ -471,6 +471,7 @@ export const parseGuardStates = ({
 
   // Check for whitelisted addresses
   if (guards.allowed) {
+    console.log("Guards allowed:");
     console.log(guards.allowed);
     states.isWalletWhitelisted = !!guards.allowed.find((x) =>
       x.equals(walletAddress)
