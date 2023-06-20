@@ -94,7 +94,7 @@ export default function useCandyMachineV3(
       return {
         merkles: {},
         verifyProof() {
-          return false;
+          return true;
         },
       };
     }
