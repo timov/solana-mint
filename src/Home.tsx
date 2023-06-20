@@ -485,7 +485,7 @@ const Home = (props: HomeProps) => {
     candyMachineV3.prices,
   ]);
   useEffect(() => {
-    console.log({ guardLabel, guards, guardStates, prices });
+    // console.log({ guardLabel, guards, guardStates, prices });
   }, [guardLabel, guards, guardStates, prices]);
   useEffect(() => {
     (async () => {

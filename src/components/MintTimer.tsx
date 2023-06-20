@@ -168,7 +168,7 @@ export default function MintGroup({
                     };
                 });
 
-            console.log({ nftGuards });
+            // console.log({ nftGuards });
             // debugger;
             candyMachineV3
                 .mint(quantityString, {

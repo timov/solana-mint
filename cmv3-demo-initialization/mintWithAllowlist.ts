@@ -27,17 +27,17 @@ const mintingWallet = metaplex.identity().publicKey;
 (async function () {
   const { program } = require("./cache.json");
   if (!program)
-    return console.log("Program not found in your cache, exiting...");
+    return; // console.log("Program not found in your cache, exiting...");
   const candyMachine = await metaplex.candyMachines().findByAddress({
     address: new PublicKey(program.candyMachine),
   });
   const merkleProof = getMerkleProof(allowList, mintingWallet.toBase58());
-  console.log(
-    mintingWallet,
-    allowList,
-    // merkleProof,
-    merkleProof.map((p) => new PublicKey(p).toString())
-  );
+  // console.log(
+  //   mintingWallet,
+  //   allowList,
+  //   // merkleProof,
+  //   merkleProof.map((p) => new PublicKey(p).toString())
+  // );
   if (!merkleProof.length) return;// console.log("User is not in allowed list");
   //   await metaplex.candyMachines().callGuardRoute({
   //     candyMachine,

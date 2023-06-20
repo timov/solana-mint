@@ -297,7 +297,7 @@ export default function useCandyMachineV3(
 
   React.useEffect(() => {
     if (!mx || !wallet.publicKey) return;
-    console.log("useEffact([mx, wallet.publicKey])");
+    // console.log("useEffact([mx, wallet.publicKey])");
     mx.use(walletAdapterIdentity(wallet));
 
     mx.rpc()
@@ -404,7 +404,7 @@ export default function useCandyMachineV3(
   }, [guardsAndGroups, tokenHoldings, balance]);
 
   React.useEffect(() => {
-    console.log({ guardsAndGroups, guardStates, prices });
+    // console.log({ guardsAndGroups, guardStates, prices });
   }, [guardsAndGroups, guardStates, prices]);
 
   return {
