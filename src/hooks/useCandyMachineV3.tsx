@@ -114,6 +114,7 @@ export default function useCandyMachineV3(
       label = "default"
     ) => {
       let merkle = merkles[label];
+      console.log(label);
       if (!merkle) return;
       console.log("MERKLE!");
       let hex = Buffer.from(merkleRoot).toString('hex');
