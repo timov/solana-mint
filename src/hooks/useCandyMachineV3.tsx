@@ -145,7 +145,8 @@ export default function useCandyMachineV3(
 
         return cndy;
       })
-      .catch((e) => console.error("Error while fetching candy machine", e))
+      // .catch((e) => console.error("Error while fetching candy machine", e))
+      .catch()
       .finally(() => setStatus((x) => ({ ...x, candyMachine: false })));
   }, [fetchCandyMachine, wallet.publicKey]);
 
