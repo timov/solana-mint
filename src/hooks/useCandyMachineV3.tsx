@@ -116,6 +116,8 @@ export default function useCandyMachineV3(
       let merkle = merkles[label];
       if (!merkle) return;
       console.log("MERKLE!");
+      let hex = Buffer.from(merkle).toString('hex');
+      console.log(hex);
       const verifiedProof = !!merkle.proof.length;
       const compareRoot = merkle.tree.getRoot().equals(Buffer.from(merkleRoot));
       console.log(verifiedProof);
