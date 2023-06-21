@@ -431,7 +431,7 @@ const candyMachinOps = {
       list: require("../src/constants/whitelist-wls.json"),
       groupLabel: "WLs",
     },
-    // {
+    //  {
     //   list: require("../src/constants/whitelist-public.json"),
     //   groupLabel: "Public",
     // }
