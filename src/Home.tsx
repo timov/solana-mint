@@ -100,7 +100,7 @@ const Other = styled.div`
 const ImageWrap = styled.div`
   aspect-ratio: 1 / 1;
   width: 100%;
-  background-image: url(https://tvwm4hrqyofaboii4opkzty6xqlar27efpt4hakdqufqa5sls6za.arweave.net/nWzOHjDDigC5COOerM8evBYI6-Qr58OBQ4ULAHZLl7I);
+  background-image: url(https://gpanxzujohoxdd2a3uv5wdppcpqnkujeufhuw5pwmeodgtux24bq.arweave.net/M8Db5olx3XGPQN0r2w3vE-DVUSShT0t19mEcM06X1wM?ext=png);
   border-radius: 16px;
   background-size: cover;
 `
