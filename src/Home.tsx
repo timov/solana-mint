@@ -423,14 +423,14 @@ export interface HomeProps {
 }
 const candyMachinOps = {
   allowLists: [
-    {
-      list: require("../src/constants/whitelist-ogs.json"),
-      groupLabel: "OGs",
-    },
-    {
-      list: require("../src/constants/whitelist-wls.json"),
-      groupLabel: "WLs",
-    },
+    // {
+    //   list: require("../src/constants/whitelist-ogs.json"),
+    //   groupLabel: "OGs",
+    // },
+    // {
+    //   list: require("../src/constants/whitelist-wls.json"),
+    //   groupLabel: "WLs",
+    // },
     //  {
     //   list: require("../src/constants/whitelist-public.json"),
     //   groupLabel: "Public",
