@@ -701,33 +701,9 @@ const Home = (props: HomeProps) => {
             </Column>
             <Column>
               <Content>
-                <CollectionName>Abstract Of Art</CollectionName>
-                <InfoRow>
-                  {guardStates.isStarted && wallet.publicKey && (
-                    <InfoBox>
-                      <p>Total items:</p>
-                      <p>{candyMachineV3.items.available}{" "}</p>
-                    </InfoBox>)}
-                  <IconRow>
-                    <a href="https://www.codeoflifecol.com/" target="_blank" rel="noopener noreferrer"><Globe></Globe></a>
-                    <a href="https://twitter.com/codeoflife_COL" target="_blank" rel="noopener noreferrer"><Twitter></Twitter></a>
-                    <a href="https://discord.gg/col" target="_blank" rel="noopener noreferrer"><Discord></Discord></a>
-                  </IconRow>
-                </InfoRow>
-                <CollectionDescription>A non-objective art, which does not have an accurate representation of a visual reality, but uses Forms, Colors, Textures and Gesture Marks to achieve its effect. It was born at the beginning of the 20th century and was completely radical for its time.</CollectionDescription>
+                <CollectionName>Talk to MR7 to continue</CollectionName>
               </Content>
               <Other>
-
-              {!wallet?.publicKey ? (
-                  <ConnectWallet>Connect Wallet</ConnectWallet>
-                  // ) : !guardStates.canPayFor ? (
-                  //   <h1>You cannot pay for the mint</h1>
-                ) : !guardStates.isWalletWhitelisted ? (
-                  <PrivateWrap>
-                    <PrivateText>Mint is private</PrivateText>
-                    <PrivateSubtext>You are currently not allowed to mint. Please try again at a later time.</PrivateSubtext>
-                  </PrivateWrap> ) : null}
-
               {guardStates.isStarted && wallet.publicKey && (
                 <MintGroupWrap className="mintGroupWrap">
                   {mintGroups.map((x, key) => (
