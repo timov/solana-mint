@@ -701,7 +701,7 @@ const Home = (props: HomeProps) => {
             </Column>
             <Column>
               <Content>
-                <CollectionName>Talk to MR7 to continue</CollectionName>
+                <CollectionName>Talk to MR7 to continue...</CollectionName>
               </Content>
               <Other>
               {guardStates.isStarted && wallet.publicKey && (
